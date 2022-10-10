@@ -1,14 +1,12 @@
 # Output the private and public IPs of the instance
 
-output "AmpereA1_PrivateIPs" {
-  value = ["${oci_core_instance.ampere_a1.*.private_ip}"]
+# NEED TO CHANGE TO PRIVATE IP - WIP
+output "ampere_taut2a_private_ips" {
+  value =  ["${google_compute_instance.vnet.network_interface.0.access_config.0.nat_ip}"]
+  sensitive = false
 }
 
-output "AmpereA1_PublicIPs" {
-  value = ["${oci_core_instance.ampere_a1.*.public_ip}"]
-}
-
-# Output the boot volume IDs of the instance
-output "AmpereA1_BootVolumeIDs" {
-  value = ["${oci_core_instance.ampere_a1.*.boot_volume_id}"]
+output "ampere_taut2a_public_ips" {
+  value =  ["${google_compute_instance.vnet.network_interface.0.access_config.0.nat_ip}]
+  sensitive = false
 }

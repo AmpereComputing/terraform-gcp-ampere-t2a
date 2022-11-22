@@ -21,11 +21,13 @@ resource "google_compute_instance" "default" {
 ### Works for Ubuntu Metadata
     user-data      = data.template_file.cloud_config.rendered
 #   user-data      = data.cloudinit_config.cloud_config.rendered
-    startup-script = data.template_file.startup_script.rendered
+#   startup-script = data.template_file.startup_script.rendered
+    startup-script = local.os_images[var.gcp_os_image].startup_script
   }
   boot_disk {
     initialize_params {
-       image = "debian-11-arm64"
+       image = local.os_images[var.gcp_os_image].os_image
+#       image = "debian-11-arm64"
 #      image = "cos-arm64-101-lts"  # Can't Find
 #       image = "rocky-linux-9-optimized-gcp-arm64"
 #      image = "rocky-linux-9-arm64"

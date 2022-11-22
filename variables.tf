@@ -74,3 +74,10 @@ variable "gce_vcn_cidr_subnet" {
   description = "CIDR Address range for GCE Networks"
   type        = string
 }
+
+variable "gcp_os_image" {
+#  default     = "ubuntu2204"
+#  default     = "rockylinux9"
+  default     = "debian11"
+  description = "Default OS Image From the Local Vars"
+}

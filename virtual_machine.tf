@@ -13,15 +13,24 @@ resource "google_compute_instance" "default" {
     enable-oslogin = true
 #   ssh-keys = "root:${tls_private_key.gce.public_key_openssh}"
 #    ssh-keys = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${tls_private_key.gce.public_key_openssh}"
-    ssh-keys = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${tls_private_key.gce.public_key_openssh} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
+#    ssh-keys = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${tls_private_key.gce.public_key_openssh} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
+    ssh-keys = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${replace(tls_private_key.gce.public_key_openssh, "\n", "")} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
 #   ssh-keys       = "ppouliot_amperecomputing_com:${tls_private_key.gce.public_key_openssh}"
 #   ssh-keys = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${tls_private_key.gce.public_key_openssh}"
 #   user-data      = "${base64encode(data.template_file.cloud_config.rendered)}"
-#   user-data      = data.template_file.cloud_config.rendered
+### Works for Ubuntu Metadata
+    user-data      = data.template_file.cloud_config.rendered
+#   user-data      = data.cloudinit_config.cloud_config.rendered
+    startup-script = data.template_file.startup_script.rendered
   }
   boot_disk {
     initialize_params {
-      image = "debian-11-arm64"
+       image = "debian-11-arm64"
+#      image = "cos-arm64-101-lts"  # Can't Find
+#       image = "rocky-linux-9-optimized-gcp-arm64"
+#      image = "rocky-linux-9-arm64"
+#      image = "rocky-linux-8-optimized-gcp-arm64"
+#      image = "ubuntu-2204-lts-arm64"
     }
   }
 

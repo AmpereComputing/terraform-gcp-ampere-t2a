@@ -47,6 +47,11 @@ variable "cloud_init_template_file" {
   description = "Optional path for a cloud-init file"
   type        = string
 }
+variable "startup_script_template_file" {
+  default     = null
+  description = "Optional path for a startup script file"
+  type        = string
+}
 variable "instance_prefix" {
   description = "Name prefix for vm instances"
   default     = "ampere-taut2a"

@@ -10,21 +10,62 @@ variable "google_gce_service_account_credentials_file" {
 }
 
 
-variable "google_project_id" {
+variable "project_id" {
   description = "Google Project ID"
 }
+variable "project_number" {
+  description = "Google Project Number"
+}
 
-variable "google_location" {
+
+variable "location" {
   description = "Google Location"
   default = "US"
 }
 
-variable "google_region" {
+variable "region" {
   description = "Google Region"
   default = "us-central1"
+}
+variable "zone" {
+  description = "Google Region"
+  default = "us-central1-a"
 }
 
 variable "google_storage_class" {
   description = "Google Storage Class"
   default = "standard"
+}
+
+variable "gce_vm_count" {
+  description = "GCE Virtual Machine Count"
+  default     = 1
+}
+
+variable "cloud_init_template_file" {
+  default     = null
+  description = "Optional path for a cloud-init file"
+  type        = string
+}
+variable "instance_prefix" {
+  description = "Name prefix for vm instances"
+  default     = "ampere-taut2a"
+}
+variable "virtual_network_name" {
+  default     = "terraform-ampere-taut2a"
+  description = "virtual_network_name"
+  type        = string
+}
+
+
+variable "gce_vcn_cidr_block" {
+  default     = "10.2.0.0/16"
+  description = "CIDR Address range for GCE Networks"
+  type        = string
+}
+
+variable "gce_vcn_cidr_subnet" {
+  default     = "10.2.1.0/24"
+  description = "CIDR Address range for GCE Networks"
+  type        = string
 }

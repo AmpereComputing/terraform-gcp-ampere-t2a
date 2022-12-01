@@ -1,1 +1,1 @@
-# terraform-gce-ampere-tau-t2a
+# terraform-gcp-ampere-tau-t2a

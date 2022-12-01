@@ -40,13 +40,13 @@ data "cloudinit_config" "cloud_config" {
 
 #resource "google_compute_project_metadata_item" "ssh-keys" {
 #  key   = "ssh-keys"
-#  value =  tls_private_key.gce.public_key_openssh
-#  value = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${replace(tls_private_key.gce.public_key_openssh, "\n", "")} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
+#  value =  tls_private_key.gcp.public_key_openssh
+#  value = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${replace(tls_private_key.gcp.public_key_openssh, "\n", "")} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
 #}
 
 resource "google_os_login_ssh_public_key" "cache" {
   user = data.google_client_openid_userinfo.me.email
-#  key =  tls_private_key.gce.public_key_openssh
-  key = "${replace(tls_private_key.gce.public_key_openssh, "\n", "")} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
+#  key =  tls_private_key.gcp.public_key_openssh
+  key = "${replace(tls_private_key.gcp.public_key_openssh, "\n", "")} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
   project = var.project_id
 }

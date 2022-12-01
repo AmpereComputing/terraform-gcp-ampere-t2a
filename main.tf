@@ -1,27 +1,27 @@
 # ssh keys
-resource "tls_private_key" "gce" {
+resource "tls_private_key" "gcp" {
   algorithm = "RSA"
   rsa_bits  = "4096"
 }
 
-resource "local_file" "gce-ssh-privkey" {
-    content = tls_private_key.gce.private_key_pem
-    filename = "${path.module}/gce-id_rsa"
+resource "local_file" "gcp-ssh-privkey" {
+    content = tls_private_key.gcp.private_key_pem
+    filename = "${path.module}/gcp-id_rsa"
     file_permission = "0600"
 }
 
-resource "local_file" "gce-ssh-pubkey" {
-    content  = tls_private_key.gce.public_key_openssh
-    filename = "${path.module}/gce-id_rsa.pub"
+resource "local_file" "gcp-ssh-pubkey" {
+    content  = tls_private_key.gcp.public_key_openssh
+    filename = "${path.module}/gcp-id_rsa.pub"
     file_permission = "0644"
 }
 
-output "gce_ssh_pubic_key" {
-  value = tls_private_key.gce.public_key_openssh
+output "gcp_ssh_pubic_key" {
+  value = tls_private_key.gcp.public_key_openssh
 }
 
-output "gce_ssh_private_key" {
-  value = tls_private_key.gce.private_key_pem
+output "gcp_ssh_private_key" {
+  value = tls_private_key.gcp.private_key_pem
   sensitive = true
 }
 

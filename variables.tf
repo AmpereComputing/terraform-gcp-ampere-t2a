@@ -5,18 +5,9 @@
 ## Google Project name
 ## -------------------
 
-variable "google_gce_service_account_credentials_file" {
-  description = "Google GCE Service Account Credentials File"
-}
-
-
 variable "project_id" {
   description = "Google Project ID"
 }
-variable "project_number" {
-  description = "Google Project Number"
-}
-
 
 variable "location" {
   description = "Google Location"
@@ -32,12 +23,7 @@ variable "zone" {
   default = "us-central1-a"
 }
 
-variable "google_storage_class" {
-  description = "Google Storage Class"
-  default = "standard"
-}
-
-variable "gce_vm_count" {
+variable "gcp_vm_count" {
   description = "GCE Virtual Machine Count"
   default     = 1
 }
@@ -63,13 +49,13 @@ variable "virtual_network_name" {
 }
 
 
-variable "gce_vcn_cidr_block" {
+variable "gcp_vcn_cidr_block" {
   default     = "10.2.0.0/16"
   description = "CIDR Address range for GCE Networks"
   type        = string
 }
 
-variable "gce_vcn_cidr_subnet" {
+variable "gcp_vcn_cidr_subnet" {
   default     = "10.2.1.0/24"
   description = "CIDR Address range for GCE Networks"
   type        = string

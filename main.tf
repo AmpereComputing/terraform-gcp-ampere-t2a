@@ -6,13 +6,13 @@ resource "tls_private_key" "gcp" {
 
 resource "local_file" "gcp-ssh-privkey" {
     content = tls_private_key.gcp.private_key_pem
-    filename = "${path.module}/gcp-id_rsa"
+    filename = "${path.cwd}/gcp-id_rsa"
     file_permission = "0600"
 }
 
 resource "local_file" "gcp-ssh-pubkey" {
     content  = tls_private_key.gcp.public_key_openssh
-    filename = "${path.module}/gcp-id_rsa.pub"
+    filename = "${path.cwd}/gcp-id_rsa.pub"
     file_permission = "0644"
 }
 

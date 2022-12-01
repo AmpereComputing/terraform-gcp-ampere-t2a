@@ -35,4 +35,4 @@ runcmd:
   - docker run -d --name registry --restart=always -p 4000:5000  -v registry:/var/lib/registry registry:2
   - pip3 install -U pip
   - pip3 install -U wheel
-  - echo 'Azure Ampere VM Ubuntu 20.04 Example' >> /etc/motd
+  - echo 'GCE Tau T2A Instance Powered by Ampere® Altra' >> /etc/motd

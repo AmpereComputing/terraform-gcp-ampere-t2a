@@ -11,6 +11,16 @@ locals {
         default_os_user = "debian"
         startup_script  = data.template_file.startup_script.rendered
       }
+      ubuntu1804     = {
+        os_image        = "ubuntu-1804-lts-arm64"
+        default_os_user = "ubuntu"
+        startup_script  =  null
+      }
+      ubuntu2004     = {
+        os_image        = "ubuntu-2004-lts-arm64"
+        default_os_user = "ubuntu"
+        startup_script  =  null
+      }
       ubuntu2204     = {
         os_image        = "ubuntu-2204-lts-arm64"
         default_os_user = "ubuntu"

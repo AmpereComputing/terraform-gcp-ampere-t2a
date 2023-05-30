@@ -16,13 +16,21 @@ resource "local_file" "gcp-ssh-pubkey" {
     file_permission = "0644"
 }
 
+# Output GCE SSH public key
 output "gcp_ssh_pubic_key" {
   value = tls_private_key.gcp.public_key_openssh
 }
 
+# Output GCE SSH private key
 output "gcp_ssh_private_key" {
   value = tls_private_key.gcp.private_key_pem
   sensitive = true
 }
 
 resource "random_uuid" "random_id" { }
+o
+# Output a randomly generated uuid
+output "random_uuid" {
+  value = random_uuid.random_id.result 
+  sensitive = false
+}   

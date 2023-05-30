@@ -13,6 +13,7 @@ data "template_file" "cloud_config" {
   template = file("${local.cloud_init_template_file}")
 }
 
+# Output rendered cloud-init metadata
 output "cloud_init" {
   value = data.template_file.cloud_config.rendered
   sensitive = false
@@ -22,6 +23,8 @@ data "template_file" "startup_script" {
 # template = file("${path.module}/templates/startup-script.sh.tpl")
   template = file("${local.startup_script_template_file}")
 }
+
+# Output rendered startup script
 output "startup_script" {
   value = data.template_file.startup_script.rendered
   sensitive = false

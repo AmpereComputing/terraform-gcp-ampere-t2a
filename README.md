@@ -46,10 +46,6 @@ terraform init && terraform plan && terraform apply -auto-approve
 ```
 
 <!-- BEGIN_TF_DOCS -->
-## Requirements
-
-No requirements.
-
 ## Providers
 
 | Name | Version |
@@ -60,10 +56,6 @@ No requirements.
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
 | <a name="provider_template"></a> [template](#provider\_template) | n/a |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
-
-## Modules
-
-No modules.
 
 ## Resources
 

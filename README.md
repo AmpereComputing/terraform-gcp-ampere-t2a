@@ -47,4 +47,3 @@ terraform init && terraform plan && terraform apply -auto-approve
 
 <!-- BEGIN_TF_DOCS -->
 <!-- END_TF_DOCS -->
-

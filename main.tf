@@ -28,7 +28,7 @@ output "gcp_ssh_private_key" {
 }
 
 resource "random_uuid" "random_id" { }
-o
+
 # Output a randomly generated uuid
 output "random_uuid" {
   value = random_uuid.random_id.result 

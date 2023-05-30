@@ -25,62 +25,7 @@ output:
   mode: inject
   template: |-
     <!-- BEGIN_TF_DOCS -->
-    ## Example AlmaLinux 8
-
-    ```hcl
-    {{ include "examples/almalinux8/main.tf" }}
-    ```
-
-    ## Example AlmaLinux 9
-
-    ```hcl
-    {{ include "examples/almalinux9/main.tf" }}
-    ```
-
-    ## Example FreeBSD 13.1
-
-    ```hcl
-    {{ include "examples/freebsd131/main.tf" }}
-    ```
-   
-    ## Example OpenMandriva 
-
-    ```hcl
-    {{ include "examples/openmandriva/main.tf" }}
-    ```
-   
-    ## Example OracleLinux 7.9
-
-    ```hcl
-    {{ include "examples/oraclelinux79/main.tf" }}
-    ```
-
-    ## Example OracleLinux 8
-
-    ```hcl
-    {{ include "examples/oraclelinux8/main.tf" }}
-    ```
-
-    ## Example Ubuntu 18.04
-
-    ```hcl
-    {{ include "examples/ubuntu1804/main.tf" }}
-    ```
-
-    ## Example Ubuntu 20.04
-
-    ```hcl
-    {{ include "examples/ubuntu2004/main.tf" }}
-    ```
-
-    ## Example Ubuntu 22.04
-
-    ```hcl
-    {{ include "examples/ubuntu2204/main.tf" }}
-    ```
-
     {{ .Content }}
-
     <!-- END_TF_DOCS -->    
 
 output-values:

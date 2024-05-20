@@ -1,3 +1,12 @@
+
+# Cloud-Init file
+locals {
+  # return var.cloud_init_template_path if it's not null
+  # otherwise return "${path.module}/templates/cloud-init.yaml.tpl"
+  cloud_init_template_file = coalesce(var.cloud_init_template_file, "${path.module}/templates/cloud-init.yaml.tpl")
+  startup_script_template_file = coalesce(var.startup_script_template_file, "${path.module}/templates/startup-script.sh.tpl")
+}
+
 # ssh keys
 resource "tls_private_key" "gcp" {
   algorithm = "RSA"
@@ -34,3 +43,11 @@ output "random_uuid" {
   value = random_uuid.random_id.result 
   sensitive = false
 }   
+
+resource "google_os_login_ssh_public_key" "cache" {
+  user = data.google_client_openid_userinfo.me.email
+#  key =  tls_private_key.gcp.public_key_openssh
+  key = "${replace(tls_private_key.gcp.public_key_openssh, "\n", "")} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
+  project = var.project_id
+}
+

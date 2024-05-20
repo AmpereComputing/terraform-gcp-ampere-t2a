@@ -62,8 +62,8 @@ variable "gcp_vcn_cidr_subnet" {
 }
 
 variable "gcp_os_image" {
-#  default     = "ubuntu2204"
+  default     = "ubuntu2404"
 #  default     = "rockylinux9"
-  default     = "debian11"
+#  default     = "debian11"
   description = "Default OS Image From the Local Vars"
 }

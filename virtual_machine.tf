@@ -12,7 +12,9 @@ resource "google_compute_instance" "default" {
   metadata = {
     enable-oslogin = true
     ssh-keys = "${split("@", data.google_client_openid_userinfo.me.email)[0]}:${replace(tls_private_key.gcp.public_key_openssh, "\n", "")} ${split("@", data.google_client_openid_userinfo.me.email)[0]}"
-    user-data      = data.template_file.cloud_config.rendered
+#   user-data      = data.template_file.cloud_config.rendered
+#   user_data      = "${base64encode(file("${local.cloud_init_template_file}"))}"
+    user_data      = "${file("${local.cloud_init_template_file}")}"
     startup-script = local.os_images[var.gcp_os_image].startup_script
   }
   boot_disk {

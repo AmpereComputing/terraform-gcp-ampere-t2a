@@ -50,11 +50,9 @@ terraform init && terraform plan && terraform apply -auto-approve
 
 | Name | Version |
 |------|---------|
-| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
 | <a name="provider_google"></a> [google](#provider\_google) | n/a |
 | <a name="provider_local"></a> [local](#provider\_local) | n/a |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
-| <a name="provider_template"></a> [template](#provider\_template) | n/a |
 | <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
 
 ## Resources
@@ -71,17 +69,14 @@ terraform init && terraform plan && terraform apply -auto-approve
 | [local_file.gcp-ssh-pubkey](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [random_uuid.random_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid) | resource |
 | [tls_private_key.gcp](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
-| [cloudinit_config.cloud_config](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 | [google_client_openid_userinfo.me](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/client_openid_userinfo) | data source |
-| [template_file.cloud_config](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
-| [template_file.startup_script](https://registry.terraform.io/providers/hashicorp/template/latest/docs/data-sources/file) | data source |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_cloud_init_template_file"></a> [cloud\_init\_template\_file](#input\_cloud\_init\_template\_file) | Optional path for a cloud-init file | `string` | `null` | no |
-| <a name="input_gcp_os_image"></a> [gcp\_os\_image](#input\_gcp\_os\_image) | Default OS Image From the Local Vars | `string` | `"debian11"` | no |
+| <a name="input_gcp_os_image"></a> [gcp\_os\_image](#input\_gcp\_os\_image) | Default OS Image From the Local Vars | `string` | `"ubuntu2404"` | no |
 | <a name="input_gcp_vcn_cidr_block"></a> [gcp\_vcn\_cidr\_block](#input\_gcp\_vcn\_cidr\_block) | CIDR Address range for GCE Networks | `string` | `"10.2.0.0/16"` | no |
 | <a name="input_gcp_vcn_cidr_subnet"></a> [gcp\_vcn\_cidr\_subnet](#input\_gcp\_vcn\_cidr\_subnet) | CIDR Address range for GCE Networks | `string` | `"10.2.1.0/24"` | no |
 | <a name="input_gcp_vm_count"></a> [gcp\_vm\_count](#input\_gcp\_vm\_count) | GCE Virtual Machine Count | `number` | `1` | no |
@@ -100,10 +95,8 @@ terraform init && terraform plan && terraform apply -auto-approve
 | <a name="output_ampere_taut2a_metadata"></a> [ampere\_taut2a\_metadata](#output\_ampere\_taut2a\_metadata) | Output rendered instance Metadata |
 | <a name="output_ampere_taut2a_private_ips"></a> [ampere\_taut2a\_private\_ips](#output\_ampere\_taut2a\_private\_ips) | Output GCE Ampere Instance Private IP(s) |
 | <a name="output_ampere_taut2a_public_ips"></a> [ampere\_taut2a\_public\_ips](#output\_ampere\_taut2a\_public\_ips) | Output GCE Ampere Instance Public IP(s) |
-| <a name="output_cloud_init"></a> [cloud\_init](#output\_cloud\_init) | Output rendered cloud-init metadata |
 | <a name="output_gcp_ssh_private_key"></a> [gcp\_ssh\_private\_key](#output\_gcp\_ssh\_private\_key) | Output GCE SSH private key |
 | <a name="output_gcp_ssh_pubic_key"></a> [gcp\_ssh\_pubic\_key](#output\_gcp\_ssh\_pubic\_key) | Output GCE SSH public key |
 | <a name="output_my-email"></a> [my-email](#output\_my-email) | Output email address |
 | <a name="output_random_uuid"></a> [random\_uuid](#output\_random\_uuid) | Output a randomly generated uuid |
-| <a name="output_startup_script"></a> [startup\_script](#output\_startup\_script) | Output rendered startup script |
 <!-- END_TF_DOCS -->

@@ -5,7 +5,7 @@ locals {
   cloud_init_template_path = "${path.cwd}/cloud-init.yaml.tpl"
 }
 
-module "gcp-ampere-tau-t2a" {
+module "ampere-t2a" {
         source                   = "github.com/amperecomputing/terraform-gcp-ampere-tau-t2a"  
         project_id               = var.project_id
      #  Optional
@@ -22,9 +22,9 @@ module "gcp-ampere-tau-t2a" {
         cloud_init_template_file     = local.cloud_init_template_path
 }
 
-output "gcp_ampere_tau_t2a_private_ips" {
+output "ampere_t2a_private_ips" {
   value     = module.gcp-ampere-tau-t2a.ampere_taut2a_private_ips
 }
-output "gcp_ampere_tau_t2a_public_ips" {
+output "ampere_t2a_public_ips" {
   value     = module.gcp-ampere-tau-t2a.ampere_taut2a_public_ips
 }

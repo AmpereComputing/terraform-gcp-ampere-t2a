@@ -53,3 +53,16 @@ locals {
       }
    }
 }
+
+data "google_compute_image" fedora_coreos_stable {
+  family  = "fedora-coreos-stable-arm64"
+  project = "fedora-coreos-cloud" 
+}
+data "google_compute_image" fedora_coreos_testing {
+  family  = "fedora-coreos-testing-arm64"
+  project = "fedora-coreos-cloud" 
+}
+data "google_compute_image" fedora_coreos_next {
+  family  = "fedora-coreos-next-arm64"
+  project = "fedora-coreos-cloud" 
+}

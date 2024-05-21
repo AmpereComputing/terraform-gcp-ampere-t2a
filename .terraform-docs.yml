@@ -26,6 +26,10 @@ output:
   template: |-
     <!-- BEGIN_TF_DOCS -->
     {{ .Content }}
+
+    ```hcl
+    {{ include "examples/almalinux8/main.tf" }}
+    ```
     <!-- END_TF_DOCS -->    
 
 output-values:

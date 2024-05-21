@@ -61,6 +61,9 @@ for example:
 ```
 ssh -i
 ```
+### OS Images
+Reference for OS images
+[https://cloud.google.com/compute/docs/images/os-details](https://cloud.google.com/compute/docs/images/os-details)
 
 <!-- BEGIN_TF_DOCS -->
 ## Providers

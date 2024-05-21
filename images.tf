@@ -1,6 +1,11 @@
 # Azure Aarch64 Images
 locals {
     os_images = {
+      almalinux9 = {
+        os_image        = "alma-linux-9-arm64"
+        default_os_user = "almalinux"
+        startup_script  = file("${local.startup_script_template_file}")
+      }
       rockylinux8 = {
         os_image        = "rocky-linux-8-optimized-gcp-arm64"
         default_os_user = "rockylinux"

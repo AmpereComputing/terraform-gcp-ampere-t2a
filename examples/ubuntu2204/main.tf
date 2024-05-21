@@ -23,8 +23,9 @@ module "ampere-t2a" {
 }
 
 output "ampere_t2a_private_ips" {
-  value     = module.gcp-ampere-tau-t2a.ampere_taut2a_private_ips
+  value     = module.ampere-t2a.ampere_t2a_private_ips
 }
 output "ampere_t2a_public_ips" {
-  value     = module.gcp-ampere-tau-t2a.ampere_taut2a_public_ips
+  value     = module.ampere-t2a.ampere_t2a_public_ips
 }
+~          

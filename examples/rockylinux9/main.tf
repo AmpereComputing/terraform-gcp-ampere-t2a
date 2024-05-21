@@ -22,9 +22,10 @@ module "ampere-t2a" {
         cloud_init_template_file     = local.cloud_init_template_path
 }
 
-output "ampere_t2aa_private_ips" {
-  value     = module.gcp-ampere-tau-t2a.ampere_taut2a_private_ips
+output "ampere_t2a_private_ips" {
+  value     = module.ampere-t2a.ampere_t2a_private_ips
 }
-output "ampere_t2aa_public_ips" {
-  value     = module.gcp-ampere-tau-t2a.ampere_taut2a_public_ips
+output "ampere_t2a_public_ips" {
+  value     = module.ampere-t2a.ampere_t2a_public_ips
 }
+~          

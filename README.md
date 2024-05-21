@@ -126,6 +126,3 @@ Reference for OS images
 | <a name="output_my-email"></a> [my-email](#output\_my-email) | Output email address |
 | <a name="output_random_uuid"></a> [random\_uuid](#output\_random\_uuid) | Output a randomly generated uuid |
 <!-- END_TF_DOCS -->
-=======
-| <a name="output_startup_script"></a> [startup\_script](#output\_startup\_script) | Output rendered startup script |
-<!-- END_TF_DOCS -->

@@ -129,4 +129,3 @@ Reference for OS images
 =======
 | <a name="output_startup_script"></a> [startup\_script](#output\_startup\_script) | Output rendered startup script |
 <!-- END_TF_DOCS -->
->>>>>>> eec3121 (adding examples)

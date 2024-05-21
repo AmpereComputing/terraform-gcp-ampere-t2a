@@ -15,5 +15,5 @@ resource "google_compute_subnetwork" "vnet" {
 }
 
 resource "google_compute_address" "static_ip" {
-  name = "debian-vm"
+  name = "terraform-t2a-vm"
 }

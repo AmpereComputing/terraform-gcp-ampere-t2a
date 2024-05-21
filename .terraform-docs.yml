@@ -29,15 +29,12 @@ output:
 
     ## RockyLinux8
 
-    ```hcl
     {{ include "examples/rockylinux8/main.tf" }}
-    ```
 
     ## RockyLinux9
 
-    ```hcl
     {{ include "examples/rockylinux9/main.tf" }}
-    ```
+
     <!-- END_TF_DOCS -->    
 
 output-values:

@@ -117,9 +117,9 @@ Reference for OS images
 
 | Name | Description |
 |------|-------------|
-| <a name="output_ampere_taut2a_metadata"></a> [ampere\_taut2a\_metadata](#output\_ampere\_taut2a\_metadata) | Output rendered instance Metadata |
-| <a name="output_ampere_taut2a_private_ips"></a> [ampere\_taut2a\_private\_ips](#output\_ampere\_taut2a\_private\_ips) | Output GCE Ampere Instance Private IP(s) |
-| <a name="output_ampere_taut2a_public_ips"></a> [ampere\_taut2a\_public\_ips](#output\_ampere\_taut2a\_public\_ips) | Output GCE Ampere Instance Public IP(s) |
+| <a name="output_ampere_t2a_metadata"></a> [ampere\_t2a\_metadata](#output\_ampere\_t2a\_metadata) | Output rendered instance Metadata |
+| <a name="output_ampere_t2a_private_ips"></a> [ampere\_t2a\_private\_ips](#output\_ampere\_t2a\_private\_ips) | Output GCE Ampere Instance Private IP(s) |
+| <a name="output_ampere_t2a_public_ips"></a> [ampere\_t2a\_public\_ips](#output\_ampere\_t2a\_public\_ips) | Output GCE Ampere Instance Public IP(s) |
 | <a name="output_cloud_config"></a> [cloud\_config](#output\_cloud\_config) | n/a |
 | <a name="output_gcp_ssh_private_key"></a> [gcp\_ssh\_private\_key](#output\_gcp\_ssh\_private\_key) | Output GCE SSH private key |
 | <a name="output_gcp_ssh_pubic_key"></a> [gcp\_ssh\_pubic\_key](#output\_gcp\_ssh\_pubic\_key) | Output GCE SSH public key |

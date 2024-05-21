@@ -66,4 +66,63 @@ Reference for OS images
 [https://cloud.google.com/compute/docs/images/os-details](https://cloud.google.com/compute/docs/images/os-details)
 
 <!-- BEGIN_TF_DOCS -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
+| <a name="provider_google"></a> [google](#provider\_google) | n/a |
+| <a name="provider_local"></a> [local](#provider\_local) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+| <a name="provider_tls"></a> [tls](#provider\_tls) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [google_compute_address.static_ip](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_address) | resource |
+| [google_compute_firewall.ssh](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_firewall) | resource |
+| [google_compute_instance.default](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_instance) | resource |
+| [google_compute_network.vnet](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_network) | resource |
+| [google_compute_subnetwork.vnet](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/compute_subnetwork) | resource |
+| [google_os_login_ssh_public_key.cache](https://registry.terraform.io/providers/hashicorp/google/latest/docs/resources/os_login_ssh_public_key) | resource |
+| [local_file.gcp-ssh-privkey](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
+| [local_file.gcp-ssh-pubkey](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
+| [random_uuid.random_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid) | resource |
+| [tls_private_key.gcp](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
+| [cloudinit_config.cloud_config](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
+| [google_client_openid_userinfo.me](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/client_openid_userinfo) | data source |
+| [google_compute_image.fedora_coreos_next](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/compute_image) | data source |
+| [google_compute_image.fedora_coreos_stable](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/compute_image) | data source |
+| [google_compute_image.fedora_coreos_testing](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/compute_image) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_cloud_init_template_file"></a> [cloud\_init\_template\_file](#input\_cloud\_init\_template\_file) | Optional path for a cloud-init file | `string` | `null` | no |
+| <a name="input_gcp_os_image"></a> [gcp\_os\_image](#input\_gcp\_os\_image) | Default OS Image From the Local Vars | `string` | `"ubuntu2404"` | no |
+| <a name="input_gcp_vcn_cidr_block"></a> [gcp\_vcn\_cidr\_block](#input\_gcp\_vcn\_cidr\_block) | CIDR Address range for GCE Networks | `string` | `"10.2.0.0/16"` | no |
+| <a name="input_gcp_vcn_cidr_subnet"></a> [gcp\_vcn\_cidr\_subnet](#input\_gcp\_vcn\_cidr\_subnet) | CIDR Address range for GCE Networks | `string` | `"10.2.1.0/24"` | no |
+| <a name="input_gcp_vm_count"></a> [gcp\_vm\_count](#input\_gcp\_vm\_count) | GCE Virtual Machine Count | `number` | `1` | no |
+| <a name="input_instance_prefix"></a> [instance\_prefix](#input\_instance\_prefix) | Name prefix for vm instances | `string` | `"ampere-taut2a"` | no |
+| <a name="input_location"></a> [location](#input\_location) | Google Location | `string` | `"US"` | no |
+| <a name="input_project_id"></a> [project\_id](#input\_project\_id) | Google Project ID | `any` | n/a | yes |
+| <a name="input_region"></a> [region](#input\_region) | Google Region | `string` | `"us-central1"` | no |
+| <a name="input_startup_script_template_file"></a> [startup\_script\_template\_file](#input\_startup\_script\_template\_file) | Optional path for a startup script file | `string` | `null` | no |
+| <a name="input_virtual_network_name"></a> [virtual\_network\_name](#input\_virtual\_network\_name) | virtual\_network\_name | `string` | `"terraform-ampere-taut2a"` | no |
+| <a name="input_zone"></a> [zone](#input\_zone) | Google Region | `string` | `"us-central1-a"` | no |
+
+## Outputs
+
+| Name | Description |
+|------|-------------|
+| <a name="output_ampere_t2a_metadata"></a> [ampere\_t2a\_metadata](#output\_ampere\_t2a\_metadata) | Output rendered instance Metadata |
+| <a name="output_ampere_t2a_private_ips"></a> [ampere\_t2a\_private\_ips](#output\_ampere\_t2a\_private\_ips) | Output GCE Ampere Instance Private IP(s) |
+| <a name="output_ampere_t2a_public_ips"></a> [ampere\_t2a\_public\_ips](#output\_ampere\_t2a\_public\_ips) | Output GCE Ampere Instance Public IP(s) |
+| <a name="output_cloud_config"></a> [cloud\_config](#output\_cloud\_config) | n/a |
+| <a name="output_gcp_ssh_private_key"></a> [gcp\_ssh\_private\_key](#output\_gcp\_ssh\_private\_key) | Output GCE SSH private key |
+| <a name="output_gcp_ssh_pubic_key"></a> [gcp\_ssh\_pubic\_key](#output\_gcp\_ssh\_pubic\_key) | Output GCE SSH public key |
+| <a name="output_my-email"></a> [my-email](#output\_my-email) | Output email address |
+| <a name="output_random_uuid"></a> [random\_uuid](#output\_random\_uuid) | Output a randomly generated uuid |
 <!-- END_TF_DOCS -->

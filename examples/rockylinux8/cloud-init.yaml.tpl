@@ -47,4 +47,4 @@ runcmd:
   - systemctl start docker
   - docker run -d --name registry --restart=always -p 4000:5000  -v registry:/var/lib/registry registry:2
   - docker info
-  - echo 'Ampere T2A RockyLinux 9 Example' >> /etc/motd
+  - echo 'Ampere T2A RockyLinux 8 Example' >> /etc/motd

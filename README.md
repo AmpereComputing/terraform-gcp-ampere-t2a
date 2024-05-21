@@ -45,6 +45,23 @@ This can also be used as a terraform module.   The [examples](examples) director
 terraform init && terraform plan && terraform apply -auto-approve
 ```
 
+### Running OpenTofu
+
+```
+tofu init && tofu plan && tofu apply -auto-approve
+
+```
+
+### Logging in
+
+Once everthing as executed, properly you'll need to login.   Currently I successfully login via my google cloud email account in the following format.   <username>_<domain>_<tld>  Where the "@" symbal and "." are replaces with underscores.
+
+for example:
+
+```
+ssh -i
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Providers
 
@@ -99,4 +116,9 @@ terraform init && terraform plan && terraform apply -auto-approve
 | <a name="output_gcp_ssh_pubic_key"></a> [gcp\_ssh\_pubic\_key](#output\_gcp\_ssh\_pubic\_key) | Output GCE SSH public key |
 | <a name="output_my-email"></a> [my-email](#output\_my-email) | Output email address |
 | <a name="output_random_uuid"></a> [random\_uuid](#output\_random\_uuid) | Output a randomly generated uuid |
+<<<<<<< HEAD
 <!-- END_TF_DOCS -->
+=======
+| <a name="output_startup_script"></a> [startup\_script](#output\_startup\_script) | Output rendered startup script |
+<!-- END_TF_DOCS -->
+>>>>>>> eec3121 (adding examples)

@@ -22,7 +22,7 @@ locals {
         startup_script  = file("${local.startup_script_template_file}")
       }
       fedoracoreos     = {
-        os_image        = "fedora-coreos-stable-arm64"
+        os_image        = "fedora-coreos-cloud"
         default_os_user = "fedora"
         startup_script  = null
       }

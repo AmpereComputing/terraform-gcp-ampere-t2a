@@ -7,6 +7,23 @@ locals {
   startup_script_template_file = coalesce(var.startup_script_template_file, "${path.module}/templates/startup-script.sh.tpl")
 }
 
+data "cloudinit_config" "cloud_config" {
+  gzip = false
+  base64_encode = false
+
+  part {
+    content_type = "text/cloud-config"
+#   content = template_file.cloud_config.rendered
+    content = "${file("${local.cloud_init_template_file}")}"
+    filename = "cloud.cfg"
+  }
+}
+
+
+output "cloud_config" {
+  value = data.cloudinit_config.cloud_config.rendered
+}
+
 # ssh keys
 resource "tls_private_key" "gcp" {
   algorithm = "RSA"

@@ -16,8 +16,8 @@ module "gcp-ampere-tau-t2a" {
         region                   = "us-central1"
         zone                     = "us-central1-a"
         gcp_vm_count             = 1
-        gcp_os_image           = "ubuntu2204"
-        instance_prefix          = "ampere-t2a-ubuntu2204"
+        gcp_os_image           = "debian12"
+        instance_prefix          = "ampere-t2a-debian12"
         startup_script_template_file = null
         cloud_init_template_file     = local.cloud_init_template_path
 }

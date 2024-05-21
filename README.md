@@ -67,6 +67,7 @@ ssh -i
 
 | Name | Version |
 |------|---------|
+| <a name="provider_cloudinit"></a> [cloudinit](#provider\_cloudinit) | n/a |
 | <a name="provider_google"></a> [google](#provider\_google) | n/a |
 | <a name="provider_local"></a> [local](#provider\_local) | n/a |
 | <a name="provider_random"></a> [random](#provider\_random) | n/a |
@@ -86,6 +87,7 @@ ssh -i
 | [local_file.gcp-ssh-pubkey](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [random_uuid.random_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/uuid) | resource |
 | [tls_private_key.gcp](https://registry.terraform.io/providers/hashicorp/tls/latest/docs/resources/private_key) | resource |
+| [cloudinit_config.cloud_config](https://registry.terraform.io/providers/hashicorp/cloudinit/latest/docs/data-sources/config) | data source |
 | [google_client_openid_userinfo.me](https://registry.terraform.io/providers/hashicorp/google/latest/docs/data-sources/client_openid_userinfo) | data source |
 
 ## Inputs
@@ -112,11 +114,11 @@ ssh -i
 | <a name="output_ampere_taut2a_metadata"></a> [ampere\_taut2a\_metadata](#output\_ampere\_taut2a\_metadata) | Output rendered instance Metadata |
 | <a name="output_ampere_taut2a_private_ips"></a> [ampere\_taut2a\_private\_ips](#output\_ampere\_taut2a\_private\_ips) | Output GCE Ampere Instance Private IP(s) |
 | <a name="output_ampere_taut2a_public_ips"></a> [ampere\_taut2a\_public\_ips](#output\_ampere\_taut2a\_public\_ips) | Output GCE Ampere Instance Public IP(s) |
+| <a name="output_cloud_config"></a> [cloud\_config](#output\_cloud\_config) | n/a |
 | <a name="output_gcp_ssh_private_key"></a> [gcp\_ssh\_private\_key](#output\_gcp\_ssh\_private\_key) | Output GCE SSH private key |
 | <a name="output_gcp_ssh_pubic_key"></a> [gcp\_ssh\_pubic\_key](#output\_gcp\_ssh\_pubic\_key) | Output GCE SSH public key |
 | <a name="output_my-email"></a> [my-email](#output\_my-email) | Output email address |
 | <a name="output_random_uuid"></a> [random\_uuid](#output\_random\_uuid) | Output a randomly generated uuid |
-<<<<<<< HEAD
 <!-- END_TF_DOCS -->
 =======
 | <a name="output_startup_script"></a> [startup\_script](#output\_startup\_script) | Output rendered startup script |

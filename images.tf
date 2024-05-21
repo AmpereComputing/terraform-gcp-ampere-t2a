@@ -51,7 +51,6 @@ locals {
         default_os_user = "opensuse"
         startup_script  =  null
       }
-   }
       sles15     = {
         os_image        = "sles-15-arm64"
         default_os_user = "suse"

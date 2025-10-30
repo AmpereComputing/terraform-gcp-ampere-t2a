@@ -13,7 +13,7 @@
 ![GitHub License](https://img.shields.io/github/license/AmpereComputing/terraform-gcp-ampere-t2a)
 ![GitHub deployments](https://img.shields.io/github/deployments/AmpereComputing/terraform-gcp-ampere-t2a/github-pages)
 ![Website](https://img.shields.io/website?url=https%3A%2F%2Famperecomputing.github.io/terraform-gcp-ampere-t2a)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+![GitHub License](https://img.shields.io/github/license/AmpereComputing/terraform-gcp-ampere-t2a)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Requirements

@@ -2,18 +2,17 @@
 
 # terraform-gcp-ampere-t2a
 
-[![Source Code](https://img.shields.io/badge/source-GitHub-blue.svg?style=flat)](https://github.com/AmpereComputing/terraform-oci-ampere-a1)
-![documentation workflow](https://github.com/AmpereComputing/terraform-oci-ampere-a1/actions/workflows/documentation.yml/badge.svg?label=build&style=flat-square&branch=main)
-![release workflow](https://github.com/AmpereComputing/terraform-oci-ampere-a1/actions/workflows/release.yml/badge.svg?label=build&style=flat-square&branch=main)
-[![Latest version](https://img.shields.io/github/tag/AmpereComputing/terraform-oci-ampere-a1.svg?label=release&style=flat&maxAge=3600)](https://github.com/AmpereComputing/terraform-oci-ampere-a1/tags)
-[![GitHub issues](https://img.shields.io/github/issues/AmpereComputing/terraform-oci-ampere-a1.svg)](https://github.com/AmpereComputing/terraform-oci-ampere-a1/issues)
-![Github stars](https://badgen.net/github/stars/AmpereComputing/terraform-oci-ampere-a1?icon=github&label=stars)
-![Github last-commit](https://img.shields.io/github/last-commit/AmpereComputing/terraform-oci-ampere-a1)
-[![GitHub forks](https://img.shields.io/github/forks/AmpereComputing/terraform-oci-ampere-a1.svg)](https://github.com/AmpereComputing/terraform-oci-ampere-a1/network)
-![Github forks](https://badgen.net/github/forks/AmpereComputing/terraform-oci-ampere-a1?icon=github&label=forks)
-![GitHub License](https://img.shields.io/github/license/AmpereComputing/terraform-oci-ampere-a1)
+[![Source Code](https://img.shields.io/badge/source-GitHub-blue.svg?style=flat)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a)
+![documentation workflow](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/actions/workflows/documentation.yml/badge.svg?label=build&style=flat-square&branch=main)
+[![Latest version](https://img.shields.io/github/tag/AmpereComputing/terraform-gcp-ampere-t2a.svg?label=release&style=flat&maxAge=3600)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/tags)
+[![GitHub issues](https://img.shields.io/github/issues/AmpereComputing/terraform-gcp-ampere-t2a.svg)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/issues)
+![Github stars](https://badgen.net/github/stars/AmpereComputing/terraform-gcp-ampere-t2a?icon=github&label=stars)
+![Github last-commit](https://img.shields.io/github/last-commit/AmpereComputing/terraform-gcp-ampere-t2a)
+[![GitHub forks](https://img.shields.io/github/forks/AmpereComputing/terraform-gcp-ampere-t2a.svg)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/network)
+![Github forks](https://badgen.net/github/forks/AmpereComputing/terraform-gcp-ampere-t2a?icon=github&label=forks)
+![GitHub License](https://img.shields.io/github/license/AmpereComputing/terraform-gcp-ampere-t2a)
 ![GitHub deployments](https://img.shields.io/github/deployments/AmpereComputing/terraform-gcp-ampere-t2a/github-pages)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Famperecomputing.github.io/terraform-oci-ampere-a1)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Famperecomputing.github.io/terraform-gcp-ampere-t2a)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 

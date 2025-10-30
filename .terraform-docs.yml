@@ -32,22 +32,16 @@ content: |-
     {{ include "examples/debian12/main.tf" }}
     ```
 
-    ### OpenSuse
-
-    ```hcl
-    {{ include "examples/opensuse/main.tf" }}
-    ```
-
     ### Fedora CoreOS
 
     ```hcl
     {{ include "examples/fedoracoreos/main.tf" }}
     ```
 
-    ### Suse Linux Enterprise 15
+    ### OpenSuse
 
     ```hcl
-    {{ include "examples/sles15/main.tf" }}
+    {{ include "examples/opensuse/main.tf" }}
     ```
 
     ### Example RockyLinux 8
@@ -62,16 +56,10 @@ content: |-
     {{ include "examples/rockylinux9/main.tf" }}
     ```
 
-    ### Example FreeBSD 13.1
+    ### Suse Linux Enterprise 15
 
     ```hcl
-    {{ include "examples/freebsd131/main.tf" }}
-    ```
-
-    ### Example Ubuntu 20.04
-
-    ```hcl
-    {{ include "examples/ubuntu2004/main.tf" }}
+    {{ include "examples/sles15/main.tf" }}
     ```
 
     ### Example Ubuntu 22.04

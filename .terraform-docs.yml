@@ -1,4 +1,4 @@
-formatter: "" # this is required
+formatter: "markdown"
 
 version: ""
 
@@ -8,17 +8,90 @@ footer-from: ""
 recursive:
   enabled: false
   path: modules
+  include-main: true
 
 sections:
-  hide: 
-    - requirements
-    - modules
+  hide: []
   show: []
 
-  hide-all: false # deprecated in v0.13.0, removed in v0.15.0
-  show-all: true  # deprecated in v0.13.0, removed in v0.15.0
+content: |-
 
-content: ""
+    {{ .Header }}
+
+    ## Examples
+
+    ### Debian 11
+
+    ```hcl
+    {{ include "examples/debian11/main.tf" }}
+    ```
+
+    ### Debian 12
+
+    ```hcl
+    {{ include "examples/debian12/main.tf" }}
+    ```
+
+    ### OpenSuse
+
+    ```hcl
+    {{ include "examples/opensuse/main.tf" }}
+    ```
+
+    ### Fedora CoreOS
+
+    ```hcl
+    {{ include "examples/fedoracoreos/main.tf" }}
+    ```
+
+    ### Suse Linux Enterprise 15
+
+    ```hcl
+    {{ include "examples/sles15/main.tf" }}
+    ```
+
+    ### Example RockyLinux 8
+
+    ```hcl
+    {{ include "examples/rockylinux8/main.tf" }}
+    ```
+
+    ### Example RockyLinux 9
+
+    ```hcl
+    {{ include "examples/rockylinux9/main.tf" }}
+    ```
+
+    ### Example FreeBSD 13.1
+
+    ```hcl
+    {{ include "examples/freebsd131/main.tf" }}
+    ```
+
+    ### Example Ubuntu 20.04
+
+    ```hcl
+    {{ include "examples/ubuntu2004/main.tf" }}
+    ```
+
+    ### Example Ubuntu 22.04
+
+    ```hcl
+    {{ include "examples/ubuntu2204/main.tf" }}
+    ```
+    ### Example Ubuntu 24.04
+
+    ```hcl
+    {{ include "examples/ubuntu2404/main.tf" }}
+    ```
+
+    {{ .Inputs }}
+    {{ .Modules }}
+    {{ .Outputs }}
+    {{ .Providers }}
+    {{ .Resources }}
+    {{ .Requirements }}
+    {{ .Footer }}
 
 output:
   file: ""
@@ -26,18 +99,7 @@ output:
   template: |-
     <!-- BEGIN_TF_DOCS -->
     {{ .Content }}
-
-    ## Example
-
-    ````hcl
-    {{ include "examples/rockylinux8/main.tf" }}
-    ````
-
-    ````hcl
-    {{ include "examples/rockylinux9/main.tf" }}
-    ````
-
-    <!-- END_TF_DOCS -->    
+    <!-- END_TF_DOCS -->
 
 output-values:
   enabled: false

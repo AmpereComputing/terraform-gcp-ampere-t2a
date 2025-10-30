@@ -5,6 +5,7 @@
 [![Source Code](https://img.shields.io/badge/source-GitHub-blue.svg?style=flat)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a)
 ![documentation workflow](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/actions/workflows/documentation.yml/badge.svg?label=build&style=flat-square&branch=main)
 [![Latest version](https://img.shields.io/github/tag/AmpereComputing/terraform-gcp-ampere-t2a.svg?label=release&style=flat&maxAge=3600)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/tags)
+[![pages-build-deployment](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/actions/workflows/pages/pages-build-deployment)
 [![GitHub issues](https://img.shields.io/github/issues/AmpereComputing/terraform-gcp-ampere-t2a.svg)](https://github.com/AmpereComputing/terraform-gcp-ampere-t2a/issues)
 ![Github stars](https://badgen.net/github/stars/AmpereComputing/terraform-gcp-ampere-t2a?icon=github&label=stars)
 ![Github last-commit](https://img.shields.io/github/last-commit/AmpereComputing/terraform-gcp-ampere-t2a)
